@@ -108,40 +108,57 @@ padding-left: 50px;
     order: 1;
        
 }
-  .logo {
-    order: 2;
+.logo {
+  order: 2;
     
 }
   #conteudoNavbarSuportado{
-   margin: 0;
-    }
+  margin: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    background-color: white;
+  }
+}
+.container{
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;  
+  display: flex;
 }
 
 .navbar-brand {
-    display: flex;
-    padding: auto;
-    justify-content: space-between;
-}
-.navbar-brand ul li {
-    margin: auto;
-    padding: 8px;
-    justify-content: space-between;
-    align-items: center;
-    display: inline-block;
+  justify-content: space-between;
 }
 
-.navbar-brand ul li a{
-    border-style: solid;
-    border-radius: 10px;
-    border-width: 1px;
-    padding: 10px;
-    text-decoration: none;
-    color: black;
-    margin: auto;
+.navbar-brand ul li {
+  padding: 0.4em;
+  display: inline-block;
+}
+
+.navbar-brand li a{
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 1px;
+  padding: 0.5em;
+  text-decoration: none;
+  color: black;
+  margin: 0;
+  font-size: 16px;
+}
+
+.navbar-brand ul li a svg{
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  color: black;
 }
 
 .navbar-brand a:hover{
-    background-color: white;
-    color: #FA9149;
+  color: #FA9149;
+}
 
+.container .navbar-brand a:hover path {
+  fill: #FA9149;
 }
