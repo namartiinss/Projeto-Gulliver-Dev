@@ -112,6 +112,15 @@ padding-left: 50px;
   margin: 0;
   }
 }
+
+.hoteis .container{
+  justify-content: space-between;
+  padding: 0;
+}
+
+.hoteis .container > div{
+  flex: 1;
+}
 @media screen and (min-width: 375px) {
   .paraOnde__background {
     background-color: white;
@@ -122,6 +131,7 @@ padding-left: 50px;
   width: 100%;
   box-sizing: border-box;  
   display: flex;
+  justify-content: center;
 }
 
 .navbar-brand {
@@ -162,7 +172,10 @@ padding-left: 50px;
 .navbar-brand a:hover{
   color: #FA9149;
 }
-
+.hoteis h3{
+  margin: 0;
+  text-align: center;
+}
 .container .navbar-brand a:hover path {
   fill: #FA9149;
 }
@@ -314,7 +327,6 @@ padding-left: 50px;
 }
 
 h3{
-  margin-left: 570px;
   padding-top: 40px;
   padding-bottom: 20px;
   font-weight: bold;
@@ -334,7 +346,6 @@ h5{
 }
 
 h3{
-  margin-left: 570px;
   padding-top: 40px;
   padding-bottom: 20px;
   font-weight: bold;
