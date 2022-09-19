@@ -273,7 +273,17 @@
         </div>
       </div>
   </section>
-
+  <section id="maps-project">
+    <input type="text" id="inputMaps">
+    <button id="buttonMaps">Buscar</button>
+    <div id='mapouter' style='position:relative;text-align:center;width:100%; height:500px;'>
+      <div style='overflow:hidden;background:none!important;width:100%; height:500px;' id='gmap_canvasid'>
+        <iframe style='width:100%; height:500px;' id='gmap_canvas'
+          src='https://maps.google.com/maps?q=Rua%20carlos%20de%20Campos,%20219,%20vila%20schunck&t=&z=13&ie=UTF8&output=embed'
+          frameborder='0' scrolling='no' marginheight='0' marginwidth='0'>
+        </iframe><br></div>
+    </div>
+  </section>
 
 
 
@@ -294,31 +304,32 @@
 
   <div class="popup">
     <div class="containerPopup">
-        <div class="closeIcon"><img src="./img/icons/closeIcon.svg" alt=""></div>
-        <div class="orangeContainer">
-          <h3>Informe sua localização e descubra hotéis próximos a você</h3>
-          <img src="./img/menino.png" alt="">
-        </div>
-        <form class="popupCEP">
-          <img src="./img/logo-laranja.png" alt="">
-          <h4>Preencha as informações abaixo</h4>
-          <label for="name">
-            <span>CEP: </span>
-            <input type="number"  id="cep" name="name" required>
-            <span class="errorCEP">CEP inválido</span>
-          </label>
-          
-          <label for="CEP">
-            <span>Endereço: </span>
-            <input type="text" id="endereco" name="name" disabled>
-          </label>
-          
-
-          <span class="noCep">Não sabe o CEP? <a href="https://buscacepinter.correios.com.br/app/endereco/index.php">Clique aqui.</a></span>
-
-          <button type="submit">Buscar</button>
-        </form>
+      <div class="closeIcon"><img src="./img/icons/closeIcon.svg" alt=""></div>
+      <div class="orangeContainer">
+        <h3>Informe sua localização e descubra hotéis próximos a você</h3>
+        <img src="./img/menino.png" alt="">
       </div>
+      <form class="popupCEP">
+        <img src="./img/logo-laranja.png" alt="">
+        <h4>Preencha as informações abaixo</h4>
+        <label for="name">
+          <span>CEP: </span>
+          <input type="number" id="cep" name="name" required>
+          <span class="errorCEP">CEP inválido</span>
+        </label>
+
+        <label for="CEP">
+          <span>Endereço: </span>
+          <input type="text" id="endereco" name="name" disabled>
+        </label>
+
+
+        <span class="noCep">Não sabe o CEP? <a
+            href="https://buscacepinter.correios.com.br/app/endereco/index.php">Clique aqui.</a></span>
+
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
   </div>
   <script src="./script.js"></script>
 
@@ -333,46 +344,46 @@
 
 
 
-    formPopup.addEventListener("submit", (e) =>{
+    formPopup.addEventListener("submit", (e) => {
       e.preventDefault()
       window.location.href = "/index2.html";
     })
 
-    destinoItem.addEventListener("click", () =>{
+    destinoItem.addEventListener("click", () => {
       popupConsultaCep.classList.add("active")
     })
 
-    closeIconPopup.addEventListener("click", () =>{
+    closeIconPopup.addEventListener("click", () => {
       popupConsultaCep.classList.remove("active")
     })
 
-    inputCep.addEventListener("keyup", (e) =>{
+    inputCep.addEventListener("keyup", (e) => {
       let valueInputUser = e.target.value
 
-      if(valueInputUser.length === 8){
+      if (valueInputUser.length === 8) {
         getAdressUser(valueInputUser)
-      }else if( valueInputUser.length > 8){
+      } else if (valueInputUser.length > 8) {
         endereco.value = ""
         errorCep.style.display = "block"
 
-      }else if(valueInputUser.length < 8){
+      } else if (valueInputUser.length < 8) {
         errorCep.style.display = "none"
         endereco.value = ""
       }
     })
 
 
-    async function getAdressUser(valueInputCepUser){
+    async function getAdressUser(valueInputCepUser) {
       const response = await fetch(`https://viacep.com.br/ws/${valueInputCepUser}/json/`)
       const data = await response.json()
 
-      if(data.erro === "true"){
+      if (data.erro === "true") {
         errorCep.style.display = "block"
-        return 
+        return
       }
       endereco.value = data.logradouro
     }
   </script>
-</body> 
+</body>
 
 </html>
