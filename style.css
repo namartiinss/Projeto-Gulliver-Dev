@@ -563,3 +563,13 @@ footer h3 {
   cursor: pointer;
   z-index: 1000;
 }
+
+/* ======= SECTION MAPS ========*/
+
+#maps-project{
+  width: 100%;
+
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+}
