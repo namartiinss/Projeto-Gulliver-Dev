@@ -275,15 +275,26 @@
   </section>
   <section id="maps-project">
     <h2 class="text-maps">Busque estabelecimentos próximos ao seu hotel</h2>
-    <p class="p-maps">Insira abaixo o endereço do hotel</p>
-    <input type="text" id="inputMaps">
-    <button id="buttonMaps">Buscar</button>
+    <p class="p-maps">Insira abaixo o endereço do hotel:</p>
+    <div class="search-maps">
+      <input type="text" id="inputMaps">
+      <button id="buttonMaps">
+        <svg
+         width="30" height="30" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M46 72C31.6 72 20 60.4 20 46C20 31.6 31.6 20 46 20C60.4 20 72 31.6 72 46C72 60.4 60.4 72 46 72ZM46 24C33.8 24 24 33.8 24 46C24 58.2 33.8 68 46 68C58.2 68 68 58.2 68 46C68 33.8 58.2 24 46 24Z" fill="#555555"/>
+        <path d="M65.3641 62.5342L83.3241 80.4942L80.4961 83.3222L62.5361 65.3622L65.3641 62.5342Z" fill="#555555"/>
+        </svg>
+        </button>
+    </div>
     <div id='mapouter' style='position:relative;text-align:center;width:50%; height:500px;'>
-      <div style='overflow:hidden;background:none!important;width:100%; height:500px;' id='gmap_canvasid'>
+      <div
+        style='overflow:hidden;background:none!important;width:100%; height:500px; border-radius: 8px; margin-top: 14px;'
+        id='gmap_canvasid'>
         <iframe style='width:100%; height:500px;' id='gmap_canvas'
           src='https://maps.google.com/maps?q=Rua%20carlos%20de%20Campos,%20219,%20vila%20schunck&t=&z=13&ie=UTF8&output=embed'
           frameborder='0' scrolling='no' marginheight='0' marginwidth='0'>
-        </iframe><br></div>
+        </iframe><br>
+      </div>
     </div>
   </section>
 

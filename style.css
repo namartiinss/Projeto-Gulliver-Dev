@@ -567,21 +567,45 @@ footer h3 {
 /* ======= SECTION MAPS ========*/
 
 #maps-project{
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
-  margin: 24px auto;
-  display: grid;
+  margin: 34px;
+
   align-items: center;
   justify-content: center;
-  gap: 15px;
+}
 
-  margin-top: 28px;
+.text-maps{
+  font-weight: bold;
 }
 
 .p-maps{
-  margin-left: 250px;
+  color: #737070;
 }
 
-#mapouter{
-  width: 100%;
+.search-maps{
+  display: inline-block;
+}
 
+.search-maps input{
+  border: 1px solid #F16300;
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.search-maps button{
+  background-color: transparent;
+  border-radius: 6px;
+  padding: 6px;
+
+  border: 1px solid #F16300;
+  cursor: pointer;
+}
+
+.search-maps img{
+  width: 28px;
 }
