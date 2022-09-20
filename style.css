@@ -567,9 +567,21 @@ footer h3 {
 /* ======= SECTION MAPS ========*/
 
 #maps-project{
+  max-width: 100%;
+  margin: 24px auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  margin-top: 28px;
+}
+
+.p-maps{
+  margin-left: 250px;
+}
+
+#mapouter{
   width: 100%;
 
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
 }
